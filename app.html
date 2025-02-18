@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>સ્વાધ્યાય: સાંજ સામે શામળિયો</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .options {
+            display: none;
+            margin-top: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: #c8e6c9;
+        }
+    </style>
+    <script>
+        function toggleOptions(id) {
+            var options = document.getElementById(id);
+            if (options.style.display === "none" || options.style.display === "") {
+                options.style.display = "block";
+            } else {
+                options.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>સ્વાધ્યાય: સાંજ સામે શામળિયો</h2>
+        
+        <div class="question" onclick="toggleOptions('q1')">1. ગોપાલમાં ગિરધર કઇ રીતે રખાં છે?</div>
+        <div class="options" id="q1">
+            <label>...</label>
+        </div>
+        
+        <div class="question" onclick="toggleOptions('q2')">2. ‘હરી ઉલધરનો પીરો’ એટલે ......</div>
+        <div class="options" id="q2">
+            <label>...</label>
+        </div>
+        
+        <div class="question" onclick="toggleOptions('q3')">3. ભગવાન શ્રીકૃષ્ણે ........</div>
+        <div class="options" id="q3">
+            <label>(A) લાલ રંગના વસ્ત્રો પહેર્યા છે.</label>
+            <label class="correct">(B) પીળા રંગના વસ્ત્રો પહેર્યા છે.</label>
+            <label>(C) હાંસમે મોરપિછ ધારણ કર્યું છે.</label>
+            <label>(D) કાનમાં કુંડલ પહેર્યા નથી.</label>
+        </div>
+        
+        <div class="question" onclick="toggleOptions('q4')">4. શ્રીકૃષ્ણની શોભા જોઈને નરસિંહ મહેતા ......</div>
+        <div class="options" id="q4">
+            <label>(A) દુઃખી દુઃખી થાય છે</label>
+            <label>(B) કવલાંત કરે છે</label>
+            <label>(C) ભાવમૂકત बनी ગયા</label>
+            <label class="correct">(D) હર્ષ પામી રહ્યા છે.</label>
+        </div>
+    </div>
+</body>
+</html>
